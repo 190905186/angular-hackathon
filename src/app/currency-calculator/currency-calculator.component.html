@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center my-2">
+  <button type="button" class="btn btn-outline-primary me-1" (click)="toggle('e')">Exchange Rates</button>
+  <button type="button" class="btn btn-outline-primary" (click)="toggle('c')">Convert</button>
+</div>
+
+<div *ngIf="option; else elseBlock">
+  <form class="form-inline border border-black w-75 mx-auto rounded shadow p-4 mt-2">
+    <label class="sr-only">Base Currency</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" [(ngModel)]="baseCur" name="baseCur" required>
+    <label class="sr-only">Base Currency Value</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" [(ngModel)]="baseCurValue" name="baseCurValue" required>
+
+    <label class="sr-only">Quote currency</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" [(ngModel)]="quoteCur" name="quoteCur" required>
+    </div>
+    <label class="sr-only">Quote currency Value</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" [(ngModel)]="quoteCurValue" name="quoteCurValue" readonly>
+    </div>
+    <button type="submit" class="btn btn-primary mb-2" (click)="convert()">Convert</button>
+  </form>
+</div>
+
+<ng-template #elseBlock>
+  <form class="form-inline border border-black w-75 mx-auto rounded shadow p-4 mt-2">
+    <label class="sr-only" for="inlineFormInputName2">Base Currency</label>
+    <input type="text" class="form-control mb-2 mr-sm-2" name="baseCur" [(ngModel)]="baseCur" required>
+
+    <label class="sr-only" for="inlineFormInputGroupUsername2">Quote currency</label>
+    <div class="input-group mb-2 mr-sm-2">
+      <input type="text" class="form-control" name="baseCurValue" [(ngModel)]="quoteCur" required>
+    </div>
+    <div class="d-flex  justify-content-center ">
+      <button type="submit" class="btn btn-primary mb-2 " (click)="getExchangeRate()">Get Forex Rate</button>
+    </div>
+    
+    <input type="number" [value]="exchangeRate" class="form-control mb-2 mr-sm-2" readonly>
+  </form>
+</ng-template>

@@ -1,0 +1,86 @@
+<mat-card class="mx-auto mt-5 p-3 w-50 rounded-4 shadow border-dark border">
+  <mat-card-header class="justify-content-center p-1">
+    <mat-card-title>
+      Registration Form
+    </mat-card-title>
+    <mat-card-subtitle>
+      Credit card Debt Payments
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content class="mt-2">
+    <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+      <mat-form-field class="w-100">
+        <mat-label><strong>Name</strong></mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="name"
+          required
+          placeholder="enter your name"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label><strong>Address</strong></mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="address"
+          required
+          placeholder="enter your address"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label><strong>Account Number</strong></mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="accountNo"
+          required
+          placeholder="enter your account number"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label><strong>Mobile Number</strong></mat-label>
+        <input
+          matInput
+          type="number"
+          formControlName="mobileNo"
+          required
+          placeholder="enter your mobile number"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label><strong>Email</strong></mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="emailId"
+          required
+          placeholder="enter your email"
+        />
+      </mat-form-field>
+      <mat-form-field class="w-100">
+        <mat-label><strong>Password</strong></mat-label>
+        <input
+          matInput
+          type="password"
+          formControlName="password"
+          required
+          placeholder="enter your password"
+        />
+      </mat-form-field>
+      <div class="d-flex justify-content-center">
+        <button
+          mat-fab
+          extended
+          type="submit"
+          [disabled]="!registerForm.valid"
+          color="primary"
+        >
+          <mat-icon>check circle</mat-icon>
+          Submit
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

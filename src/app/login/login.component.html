@@ -1,0 +1,25 @@
+<mat-card class="mx-auto mt-5 p-3 w-50 rounded-4 shadow border-dark border">
+    <mat-card-header class="justify-content-center p-1">
+        <mat-card-title>
+            Login Form
+        </mat-card-title>
+        <mat-card-subtitle>
+            Credit card Debt Payments
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="mt-2 ">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+            <mat-form-field class="w-100">
+                <mat-label><strong>Email</strong></mat-label>
+                <input matInput type="email" formControlName="email" required placeholder="enter your email">
+            </mat-form-field>
+            <mat-form-field class="w-100">
+                <mat-label><strong>Password</strong></mat-label>
+                <input matInput type="password" formControlName="password" required placeholder="enter your password">
+            </mat-form-field>
+            <div class="d-flex justify-content-center ">
+                <button mat-fab extended type="submit" [disabled]="!loginForm.valid "color="primary"><mat-icon>check circle</mat-icon>Submit</button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
