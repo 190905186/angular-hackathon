@@ -2,39 +2,21 @@
   "users": [
     {
       "name": "sivasai",
-      "address": "India",
+      "address": "india",
       "accountNo": 289898,
       "mobileNo": 2902039901,
       "emailId": "hai@example.com",
-      "password": "siva",
+      "password": "sivasai",
       "id": 1
     },
     {
-      "name": "sivasa",
-      "address": "sivasai",
+      "name": "sivas",
+      "address": "siva",
       "accountNo": 289898,
       "mobileNo": 2902039901,
-      "emailId": "hai@example.com",
+      "emailId": "sivasai@gmail.com",
       "password": "sivasai",
       "id": 2
-    },
-    {
-      "name": "sivasai",
-      "address": "indi",
-      "accountNo": 289898,
-      "mobileNo": 2902039901,
-      "emailId": "hai@example.com",
-      "password": "sivasai",
-      "id": 3
-    },
-    {
-      "name": "sivasai",
-      "address": "sin",
-      "accountNo": 289898,
-      "mobileNo": 2902039901,
-      "emailId": "hai@example.com",
-      "password": "svia",
-      "id": 4
     }
   ]
 }

@@ -18,7 +18,7 @@ export class UserService {
   }
 
   getUsers(){  
-    return this.http.get<User>(this.post_url)
+    return this.http.get<User[]>(this.post_url)
   }
 
 }

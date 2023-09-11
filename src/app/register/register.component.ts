@@ -27,9 +27,8 @@ export class RegisterComponent {
     if (this.registerForm.valid) {
       const formValue=this.registerForm.value
       const observer={
-      next:(data:User)=>{
-        console.table(data)
-        this.users.push(data)
+      next:(data:User[])=>{
+        this.users=data
         console.log(this.users.length)
       },
       error:(e: any)=>{

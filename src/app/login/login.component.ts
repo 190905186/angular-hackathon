@@ -11,7 +11,7 @@ import { User } from '../models/userModel';
 })
 export class LoginComponent {
 loginForm=this.fb.group({
-    email:['',[Validators.required,Validators.email]],
+    emailId:['',[Validators.required,Validators.email]],
     password:['',[Validators.minLength(1),Validators.required]]
   })
   message: string=''
@@ -22,9 +22,12 @@ loginForm=this.fb.group({
   loginUser(){
     if (this.loginForm.valid) {
       const formValue=this.loginForm.value
+      console.table(formValue)
       const observer={
-      next:(data: User)=>{
-        this.users.push(data)
+      next:(data:User[])=>{
+        this.users=data
+        console.log(this.users.length)
+        console.table(this.users)
       },
       error:(e: any)=>{
         console.warn(e)
@@ -42,8 +45,11 @@ loginForm=this.fb.group({
     }
   }
   helper_function(user:User){
-    console.log(this.users[0])
-    const tempUser=this.users.filter(userObj=>userObj.emailId===user.emailId)
+    console.table(user)
+    const tempUser=this.users.filter(userObj=>{
+      console.log(userObj.emailId)
+      console.log(user.emailId)
+      return userObj.emailId===user.emailId})
     if (tempUser.length===0){
       
       window.alert("User doesnot exists.Please register")
