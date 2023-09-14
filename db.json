@@ -17,6 +17,15 @@
       "emailId": "sivasai@gmail.com",
       "password": "sivasai",
       "id": 2
+    },
+    {
+      "name": "sivasai",
+      "address": "india",
+      "accountNo": 123456789,
+      "mobileNo": 9867574733,
+      "emailId": "sivasaichowdary1234@gmail.com",
+      "password": "sivasai",
+      "id": 3
     }
   ]
 }

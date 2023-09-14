@@ -4,7 +4,7 @@
 </div>
 
 <div *ngIf="option; else elseBlock">
-  <form class="form-inline border border-black w-75 mx-auto rounded shadow p-4 mt-2">
+  <form class="form-inline border border-black bg-dark text-white w-50 mx-auto rounded shadow p-4 mt-3">
     <label class="sr-only">Base Currency</label>
     <input type="text" class="form-control mb-2 mr-sm-2" [(ngModel)]="baseCur" name="baseCur" required>
     <label class="sr-only">Base Currency Value</label>
@@ -23,7 +23,7 @@
 </div>
 
 <ng-template #elseBlock>
-  <form class="form-inline border border-black w-75 mx-auto rounded shadow p-4 mt-2">
+  <form class="form-inline border border-black bg-dark text-white w-75 mx-auto rounded shadow p-4 mt-3">
     <label class="sr-only" for="inlineFormInputName2">Base Currency</label>
     <input type="text" class="form-control mb-2 mr-sm-2" name="baseCur" [(ngModel)]="baseCur" required>
 
